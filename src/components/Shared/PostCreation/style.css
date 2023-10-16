@@ -1,0 +1,32 @@
+/* src/components/Shared/PostCreation/style.css (if you have a separate style file for PostCreation) */
+
+.post-creation-container {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .post-creation-container input, 
+  .post-creation-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .post-creation-container button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .post-creation-container button:hover {
+    background-color: #0056b3;
+  }
+  

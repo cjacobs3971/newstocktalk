@@ -1,0 +1,26 @@
+/* src/pages/LandingPage/style.css */
+
+.landingPage {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.startButton {
+    margin-left: 2vw;
+    padding: 2.8vh 6vw;
+    font-size: 14.5vh;
+    cursor: pointer;
+    border: none;
+    background-color: #0047BA;
+    color: white;
+    border-radius: 1.8vh;
+    transition: background-color 0.3s;
+}
+
+.startButton:hover {
+    background-color: #003580;
+}
