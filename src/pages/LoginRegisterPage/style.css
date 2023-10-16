@@ -1,0 +1,58 @@
+/* src/pages/LoginRegisterPage/style.css */
+
+.loginRegister {
+    background-image: url('../../assets/LoginRegister-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.formContainer {
+    background: rgba(246,242,230, 100); /* Slight transparency */
+    padding: 3vh;
+    border-radius: 1vh;
+    width: 30vw; /* Adjust as per your design requirements */
+    margin: 2vh;
+}
+
+.login, .register {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer.login {
+    margin-right: 66vw;
+    margin-left: 22vw;
+}
+
+.formContainer.register {
+    position: absolute; /* This will take the register form out of the document flow */
+    right: 14vw; /* Adjust this value to move the register form left or right */
+    left: 67vw;
+    width: 15vw;
+}
+
+input {
+    padding: 2vh;
+    margin: 1vh 0;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.5vh;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 1vh;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+
+button:hover {
+    background-color: #555;
+}
