@@ -9,7 +9,7 @@
   width: 100%;
   padding: 20px;
   flex-direction: row;
-  align-items: start;  /* Align items to the top */
+  align-items: flex-start;  /* Align items to the top */
 }
 
 .sidebar {
