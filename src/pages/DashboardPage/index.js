@@ -45,8 +45,9 @@ function DashboardPage() {
   return (
     <div className="dashboard-container">
       <div className="sidebar">
-        <CategoryFilter selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         <PostCreation />
+        <CategoryFilter selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+        
       </div>
       <div className="posts-section">
         {filteredPosts.map(post => (

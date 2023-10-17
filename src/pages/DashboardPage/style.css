@@ -1,35 +1,120 @@
+/* src\pages\DashboardPage\style.css */
+
 .dashboard-container {
-    background-image: url('../../assets/dashboard-bg.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
-  }
-  
-  .sidebar {
-    flex: 0.3;
-    padding: 10px;
-    border-right: 1px solid #ddd;
-    min-height: 100%;
-    max-width: 21.5%;
-    overflow: auto;
-    
-  }
-  
-  .posts-section {
-    color: aliceblue;
-    flex: 0.7;
-    padding: 10px;
-    border: 1px solid #ddd;
-    overflow-y: scroll;
-  }
-  /* style.css */
+  background-image: url('../../assets/dashboard-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  flex-direction: row;
+  align-items: start;  /* Align items to the top */
+}
+
+.sidebar {
+  flex: 0.3;
+  padding: 0px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  position: relative;  /* Needed for absolute positioning of children */
+  height: calc(100vh - 40px); /* minus the paddings */
+  overflow: auto;
+}
+
+.logoutsection {
+  position: absolute;
+  top: 0px;    /* Adjust as necessary */
+  right: 10px;  /* Adjust as necessary */
+}
+
+.posts-section {
+  color: aliceblue;
+  flex: 0.7;
+  padding: 10px;
+  padding-top: 20px;
+  overflow-y: scroll;
+  position: relative;  /* For positioning children */
+  height: calc(100vh - 40px); /* minus the paddings */
+}
+/* src\components\Shared\CategoryFilter\style.css */
+
+.category-filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 10px 0;
+  padding-top: 100px;
+  padding-right: 130px;
+}
+
+.category-button {
+  border: 1px solid #cbae1c;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+  background-color: #f5f5f5;
+}
 
 .category-button.active {
-    background-color: #cbae1c;  /* Green color for active state */
-    color: white;
-  }
-  
+  background-color: #cbae1c;
+  color: white;
+}
+
+/* src/components/Shared/PostCreation/style.css (if you have a separate style file for PostCreation) */
+
+.post-creation-container {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 20vw;
+}
+
+.post-creation-container input, 
+.post-creation-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.post-creation-container button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.post-creation-container button:hover {
+  background-color: #0056b3;
+}
+/* Assuming it's at src\components\Shared\Post\style.css */
+
+.post-container {
+  background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent background */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;   /* rounded corners */
+}
+
+.post-title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  color: #e0e0e0;
+  font-size: 16px;
+}

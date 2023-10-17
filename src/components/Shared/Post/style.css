@@ -1,19 +1,19 @@
-/* src/components/Shared/Post/style.css (if you have a separate style file for Post) */
+/* Assuming it's at src\components\Shared\Post\style.css */
 
 .post-container {
-    padding: 15px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .post-container h2 {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
-  
-  .post-container p {
-    margin: 5px 0;
-  }
-  
+  background-color: rgba(0, 0, 0, 0.5);  /* semi-transparent background */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;   /* rounded corners */
+}
+
+.post-title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  color: #e0e0e0;
+  font-size: 16px;
+}
