@@ -38,7 +38,9 @@ const NEW_POST_SUBSCRIPTION = gql`
 
 function DashboardPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const { loading, error, data } = useQuery(GET_POSTS);
+  const { loading, error, data } = useQuery(GET_POSTS, {
+    pollInterval: 3000,
+  });
   const { data: subscriptionData } = useSubscription(NEW_POST_SUBSCRIPTION);
 
   useEffect(() => {

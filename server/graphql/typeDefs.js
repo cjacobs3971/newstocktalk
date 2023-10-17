@@ -29,6 +29,10 @@ const typeDefs = gql`
     createPost(title: String!, body: String!, category: String!): Post!
     deletePost(postId: ID!): String!
   }
+  type Subscription {
+    newPost: Post!
+  }
+  
 `;
 
 module.exports = typeDefs;

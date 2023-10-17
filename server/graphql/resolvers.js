@@ -16,7 +16,7 @@ const resolvers = {
   Query: {
     async getPosts() {
       try {
-        const posts = await Post.find().sort({ createdAt: -1 }).populate('author');
+        const posts = await Post.find().populate('author');
         return posts;
       } catch (err) {
         throw new Error(err);
