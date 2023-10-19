@@ -1,7 +1,13 @@
 // src\components\Shared\CategoryFilter\index.js
 import React from 'react';
 
-export const CATEGORIES = ['Tech', 'Lifestyle', 'Education', 'Entertainment', 'Others'];
+export const CATEGORIES = [  
+'Core Stock Info',
+'Forex',
+'Crypto',
+'Commodities',
+'Economic Indicators',
+'Technical Indicators'];
 
 function CategoryFilter({ selectedCategory, setSelectedCategory }) {
     return (

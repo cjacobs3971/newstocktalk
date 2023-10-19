@@ -17,7 +17,7 @@ const CREATE_POST = gql`
 function PostCreation() {
   const [title, setTitle] = useState('');
   const [postContent, setPostContent] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Tech');
+  const [selectedCategory, setSelectedCategory] = useState('Core Stock Info');
   const [createPost] = useMutation(CREATE_POST);
 
   const isAuthenticated = !!localStorage.getItem('token'); // For simplicity, we're checking the token's existence.

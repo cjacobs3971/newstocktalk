@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import Post from '../../components/Shared/Post';
 import CategoryFilter from '../../components/Shared/CategoryFilter';
 import PostCreation from '../../components/Shared/PostCreation';
+import StockInfoComponent from '../../components/Shared/StockInfoComponent/StockInfoComponent';
 import './style.css';
 
 const GET_POSTS = gql`
@@ -70,10 +71,16 @@ function DashboardPage() {
         <PostCreation />
         <CategoryFilter selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
       </div>
+      <div className='right-side'>
+      <div className="data-section">
+      <StockInfoComponent category={selectedCategory} />
+
+      </div>
       <div className="posts-section">
       {[...filteredPosts].reverse().map(post => (
     <Post key={post.id} post={post} />
     ))}
+  </div>
 </div>
       <div className="logoutsection">
         <button onClick={handleLogout}>Logout</button>

@@ -1,43 +1,70 @@
-/* src\pages\DashboardPage\style.css */
+body {
+  background-color: #fbf1d4; /* Replace with your desired color */
+}
 
 .dashboard-container {
-  background-image: url('../../assets/dashboard-bg2.png');
+  background-image: url('../../assets/dashboard-bg3.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
+  max-width: 100vw;
   display: flex;
-  width: 100%;
+  width: 100vw;
   padding: 20px;
   flex-direction: row;
-  align-items: flex-start;  /* Align items to the top */
+  align-items: flex-start;
 }
 
 .sidebar {
-  flex: 0.3;
+  flex: 0.2;  /* Adjusted for lesser width */
   padding: 0px;
+  padding-top: 8vh;
   border-right: 1px solid #ddd;
   display: flex;
   flex-direction: column;
-  position: relative;  /* Needed for absolute positioning of children */
-  height: calc(100vh - 40px); /* minus the paddings */
+  position: relative;
+  height: calc(100vh - 40px);
   overflow: auto;
+  min-width: 26vw;
+}
+
+.right-side{
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;  /* This will take up the rest of the space */
+  padding-left: 8vw;
+  padding-top: 3vh;
+  padding-right: 1vw;
+  overflow: auto;
+}
+
+.data-section{
+  width: 100%;  /* Changed from max-width to width */
+  height: 50%;  /* Adjusted to take half of the vertical space */
+  white-space: nowrap;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: red;
+  animation: ticker 200s linear infinite;
 }
 
 .logoutsection {
   position: absolute;
-  top: 0px;    /* Adjust as necessary */
-  right: 10px;  /* Adjust as necessary */
+  top: 0px;
+  right: 10px;
 }
 
 .posts-section {
   color: aliceblue;
-  flex: 0.7;
+  flex: 1;  /* Takes up the remaining space */
   padding: 10px;
   padding-top: 20px;
-  overflow-y: scroll;
-  position: relative;  /* For positioning children */
-  height: calc(100vh - 40px); /* minus the paddings */
+  position: relative;
+  max-width: 60vw;
+  height: calc(100vh - 40px - 50%);  /* Adjusted to account for data-section */
 }
+
 /* src\components\Shared\CategoryFilter\style.css */
 
 .category-filter-container {
@@ -117,4 +144,13 @@
 .post-content {
   color: #e0e0e0;
   font-size: 16px;
+}
+
+@keyframes ticker {
+  0% {
+      transform: translateX(50);
+  }
+  100% {
+      transform: translateX(-1000%);
+  }
 }
