@@ -5,8 +5,11 @@ import { setContext } from '@apollo/client/link/context';
 import App from './App';
 import './index.css';
 
+// Determine the GraphQL server's URI based on the environment
+const GRAPHQL_URI = process.env.NODE_ENV === 'production' ? 'https://stocktalkv2-bd2973b2f5ef.herokuapp.com/graphql' : 'http://localhost:4000/graphql';
+
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql', // Replace with your GraphQL server's URI
+  uri: GRAPHQL_URI,
 });
 
 const authLink = setContext((_, { headers }) => {
