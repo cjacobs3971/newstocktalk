@@ -73,8 +73,9 @@ function DashboardPage() {
       </div>
       <div className='right-side'>
       <div className="data-section">
+        <div className="smallData">
       <StockInfoComponent category={selectedCategory} />
-
+      </div>
       </div>
       <div className="posts-section">
       {[...filteredPosts].reverse().map(post => (

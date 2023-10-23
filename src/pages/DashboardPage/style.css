@@ -3,7 +3,7 @@ body {
 }
 
 .dashboard-container {
-  background-image: url('../../assets/dashboard-bg3.png');
+  background-image: url('../../assets/dashboard-bg2.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -18,7 +18,7 @@ body {
 .sidebar {
   flex: 0.2;  /* Adjusted for lesser width */
   padding: 0px;
-  padding-top: 8vh;
+  padding-top: 2vh;
   border-right: 1px solid #ddd;
   display: flex;
   flex-direction: column;
@@ -36,18 +36,17 @@ body {
   padding-top: 3vh;
   padding-right: 1vw;
   overflow: auto;
+  background-color: rgba(218, 218, 218, 0.5);
 }
 
 .data-section{
   width: 100%;  /* Changed from max-width to width */
   height: 50%;  /* Adjusted to take half of the vertical space */
   white-space: nowrap;
-  border: 1px solid #ccc;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: red;
   animation: ticker 200s linear infinite;
 }
+
 
 .logoutsection {
   position: absolute;
@@ -153,4 +152,17 @@ body {
   100% {
       transform: translateX(-1000%);
   }
+}
+
+/* ... existing styles ... */
+
+/* Add these styles */
+.gainer {
+  /* Styling for gainers */
+  color: green;  /* Changes text color to green for gainers */
+}
+
+.loser {
+  /* Styling for losers */
+  color: red;    /* Changes text color to red for losers */
 }

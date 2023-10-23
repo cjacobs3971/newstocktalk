@@ -75,6 +75,7 @@ const categoryToApiMapping = {
     
         return (
             <>
+            <div class="gainer">
                 <h4>Top Gainers:</h4>
                 <ul>
                     {topGainers.map(([sector, percentage]) => (
@@ -83,6 +84,9 @@ const categoryToApiMapping = {
                         </li>
                     ))}
                 </ul>
+            
+            </div>
+            <div class="loser">
                 <h4>Top Losers:</h4>
                 <ul>
                     {topLosers.map(([sector, percentage]) => (
@@ -91,6 +95,7 @@ const categoryToApiMapping = {
                         </li>
                     ))}
                 </ul>
+                </div>
             </>
         );
     };
