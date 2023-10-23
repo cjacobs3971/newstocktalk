@@ -1,10 +1,11 @@
 require('dotenv').config({ path: '../.env' });
 const express = require('express');
+const path = require('path'); // Add this to resolve paths
 const { ApolloServer } = require('apollo-server-express');
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
 const connectDB = require('./config/connection');
-const jwtMiddleware = require('./middleware/authMiddleware');  // Import the middleware
+const jwtMiddleware = require('./middleware/authMiddleware');
 
 const app = express();
 
@@ -17,7 +18,7 @@ const cors = require('cors');
 app.use(cors(corsOptions));
 
 // Use the JWT middleware
-app.use(jwtMiddleware);  // Add this line
+app.use(jwtMiddleware);
 
 const startServer = async () => {
   const server = new ApolloServer({
@@ -35,12 +36,21 @@ const startServer = async () => {
 
   const PORT = process.env.PORT || 4000;
 
+  // Serve static assets if in production
+  if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('build'));
+
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
+    });
+  }
+
   app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}${server.graphqlPath}`);
   });
 };
 
 startServer();
-
 
 
