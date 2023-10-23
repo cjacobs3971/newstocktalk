@@ -1,5 +1,3 @@
-/* src/pages/LoginRegisterPage/style.css */
-
 .loginRegister {
     background-image: url('../../assets/LoginRegister-bg.png');
     background-size: cover;
@@ -12,11 +10,12 @@
 }
 
 .formContainer {
-    background: rgba(246,242,230, 100); /* Slight transparency */
+    background: rgba(246,242,230, .5);
     padding: 3vh;
     border-radius: 1vh;
-    width: 30vw; /* Adjust as per your design requirements */
+    width: 90%; 
     margin: 2vh;
+    max-width: 400px; /* Max width to ensure it doesn't become too wide on larger screens */
 }
 
 .login, .register {
@@ -25,15 +24,11 @@
 }
 
 .formContainer.login {
-    margin-right: 66vw;
-    margin-left: 22vw;
+    margin: 2vh auto; /* Centering on mobile */
 }
 
 .formContainer.register {
-    position: absolute; /* This will take the register form out of the document flow */
-    right: 14vw; /* Adjust this value to move the register form left or right */
-    left: 67vw;
-    width: 15vw;
+    margin: 2vh auto; /* Centering on mobile */
 }
 
 input {
@@ -41,6 +36,7 @@ input {
     margin: 1vh 0;
     border: 0.1vw solid #ccc;
     border-radius: 0.5vh;
+    width: 100%; /* Take full width of parent container */
 }
 
 button {
@@ -55,4 +51,33 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .formContainer {
+        width: 30vw;
+    }
+
+    .formContainer.login {
+        margin-right: 66vw;
+        margin-left: 22vw;
+    }
+
+    .formContainer.register {
+        position: absolute;
+        right: 14vw;
+        left: 67vw;
+        width: 15vw;
+    }
+}
+/* Media query for larger screens */
+@media screen and (max-width: 768px) {
+    .formContainer {
+        background: rgba(246,242,230, 1);
+        flex-direction: column;
+    }
+    .loginRegister{
+        flex-direction: column;
+    }
 }

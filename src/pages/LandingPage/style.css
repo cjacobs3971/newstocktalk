@@ -12,7 +12,7 @@
 .startButton {
     margin-left: 2vw;
     padding: 2.8vh 6vw;
-    font-size: 14.5vh;
+    font-size: 6rem; /* Use relative unit for font-size */
     cursor: pointer;
     border: none;
     background-color: #0047BA;
@@ -23,4 +23,19 @@
 
 .startButton:hover {
     background-color: #003580;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) { /* Tablets and below */
+    .startButton {
+        padding: 2vh 4vw; 
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) { /* Mobile devices */
+    .startButton {
+        padding: 1.5vh 3vw;
+        font-size: 1.5rem;
+    }
 }

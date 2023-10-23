@@ -165,3 +165,61 @@ body {
   /* Styling for losers */
   color: red;    /* Changes text color to red for losers */
 }
+
+@media (max-width: 768px) {
+  .dashboard-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      height: auto;
+  }
+
+  .sidebar {
+      flex: none;
+      border-right: none;
+      width: 100%;
+      min-width: 0;
+      padding-bottom: 20px;
+  }
+
+  .right-side {
+      flex: none;
+      width: 100%;
+      padding-left: 10px;
+      padding-top: 10px;
+      align-items: center;
+  }
+
+  .logoutsection {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-top: 10px;
+  }
+
+  .data-section, .posts-section {
+      width: 100%;
+  }
+
+  .post-creation-container {
+      max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .category-filter-container {
+      padding-top: 20px;
+      padding-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+    .post-container {
+    }
+
+    .post-title {
+        font-size: 18px;
+    }
+
+    .post-content {
+        font-size: 14px;
+    }
+}
