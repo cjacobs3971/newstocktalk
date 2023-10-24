@@ -74,7 +74,7 @@ button:hover {
 /* Media query for larger screens */
 @media screen and (max-width: 768px) {
     .formContainer {
-        background: rgba(246,242,230, 1);
+        background: rgba(246,242,230, .8);
         flex-direction: column;
     }
     .loginRegister{

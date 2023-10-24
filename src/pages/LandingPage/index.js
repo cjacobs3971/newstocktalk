@@ -13,6 +13,9 @@ function LandingPage() {
 
   return (
     <div className="landingPage" style={{ backgroundImage: `url(${landingImage})` }}>
+      <div className="title">
+        <h1>Stock Talk</h1>
+      </div>
       <button className="startButton" onClick={handleStartClick}>
         START
       </button>

@@ -212,8 +212,7 @@ body {
   }
 }
 @media (max-width: 768px) {
-    .post-container {
-    }
+
 
     .post-title {
         font-size: 18px;
